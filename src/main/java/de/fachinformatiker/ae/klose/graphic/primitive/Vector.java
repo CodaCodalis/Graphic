@@ -2,16 +2,16 @@ package de.fachinformatiker.ae.klose.graphic.primitive;
 
 import de.fachinformatiker.ae.klose.graphic.Primitive;
 
-public class Punkt implements Primitive {
+public class Vector implements Primitive {
 
   private int x;
   private int y;
 
-  public Punkt(){
+  public Vector(){
 
   }
 
-  public Punkt(int x, int y) {
+  public Vector(int x, int y) {
     setX(x);
     setY(y);
   }
