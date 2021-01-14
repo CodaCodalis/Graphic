@@ -1,15 +1,17 @@
 package de.fachinformatiker.ae.klose.graphic;
 
+import de.fachinformatiker.ae.klose.graphic.primitive.Primitive;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Drawing implements Primitive, Observable{
+public class Drawing implements Primitive, GraphicObservable {
   List<Primitive> primitives = new ArrayList();
-  List<Observer> observers = new ArrayList();
+  List<GraphicObserver> graphicObservers = new ArrayList();
 
  public void add(Primitive primitive){
    this.primitives.add(primitive);
-   notifyObserver();
+   notifyObserver("add", primitive);
  }
 
   public int getSize() {
@@ -18,12 +20,13 @@ public class Drawing implements Primitive, Observable{
 
   public void remove(Primitive primitive){
    this.primitives.remove(primitive);
-   notifyObserver();
+   notifyObserver("remove", primitive);
   }
 
   public void remove(int index){
+   Primitive primitive =  getPrimitive(index);
    primitives.remove(index);
-   notifyObserver();
+   notifyObserver("remove", primitive);
   }
 
   public Primitive getPrimitive(int index) {
@@ -32,23 +35,23 @@ public class Drawing implements Primitive, Observable{
 
   public void undo() {
    primitives.remove(primitives.size() - 1);
-   notifyObserver();
+   notifyObserver("undo", getPrimitive(primitives.size() - 1));
   }
 
  @Override
- public void addObserver(Observer observer) {
-  observers.add(observer);
+ public void addObserver(GraphicObserver graphicObserver) {
+  graphicObservers.add(graphicObserver);
  }
 
  @Override
- public void removeObserver(Observer observer) {
-  observers.remove(observer);
+ public void removeObserver(GraphicObserver graphicObserver) {
+  graphicObservers.remove(graphicObserver);
  }
 
  @Override
- public void notifyObserver() {
-  for (int i = 0 ; i < observers.size(); i++) {
-   observers.get(i).update();
+ public void notifyObserver(String action, Primitive primitive) {
+  for (int i = 0; i < graphicObservers.size(); i++) {
+   graphicObservers.get(i).update(this, action, primitive);
   }
  }
 }

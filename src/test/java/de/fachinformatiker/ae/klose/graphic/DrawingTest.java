@@ -1,6 +1,7 @@
 package de.fachinformatiker.ae.klose.graphic;
 
 import de.fachinformatiker.ae.klose.graphic.primitive.Oval;
+import de.fachinformatiker.ae.klose.graphic.primitive.Primitive;
 import de.fachinformatiker.ae.klose.graphic.primitive.Vector;
 import de.fachinformatiker.ae.klose.graphic.primitive.Rectangle;
 import org.junit.jupiter.api.Test;
@@ -26,7 +27,7 @@ class DrawingTest {
   }
 
   @Test
-  void testFeldEntfernen() {
+  void testRemoveDrawing() {
     Drawing drawing = new Drawing();
     Vector vector = new Vector();
     Oval oval = new Oval();
@@ -45,7 +46,7 @@ class DrawingTest {
   }
 
   @Test
-  void testGetFeld(){
+  void testGetDrawing(){
     Drawing drawing = new Drawing();
 
     Vector vector = new Vector();
@@ -81,15 +82,36 @@ class DrawingTest {
 
   @Test
   void testObservable() {
-    int [] counter = {0};
-    Observer observer = new Observer() {
+
+    int [] counter = {0, 0};
+
+    GraphicObserver graphicObserver = new GraphicObserver() {
       @Override
-      public void update() {
+      public void update(GraphicObservable observable, String action, Primitive primitive) {
         counter[0]++;
       }
     };
+
+    GraphicObserver graphicObserver2 = new GraphicObserver() {
+      @Override
+      public void update(GraphicObservable observable, String action, Primitive primitive) {
+        if (action.equals("add")) {
+          counter[1]++;
+
+        } else if (action.equals("remove")) {
+          counter[1]--;
+
+        } else if (action.equals("undo")) {
+          counter[1]--;
+
+        }
+      }
+    };
+
     Drawing drawing = new Drawing();
-    drawing.addObserver(observer);
+
+    drawing.addObserver(graphicObserver);
+    drawing.addObserver(graphicObserver2);
 
     Vector vector = new Vector();
     Oval oval = new Oval();
@@ -101,11 +123,12 @@ class DrawingTest {
     drawing.remove(oval);
 
     assertEquals(4, counter[0]);
+    assertEquals(2, counter[1]);
 
-    drawing.removeObserver(observer);
-
+    drawing.removeObserver(graphicObserver);
     drawing.add(vector);
 
     assertEquals(4, counter[0]);
+    assertEquals(3, counter[1]);
   }
 }

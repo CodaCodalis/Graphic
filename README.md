@@ -14,15 +14,23 @@
 - [Studienprojekt Design Pattern](https://www.philipphauer.de/study/se/design-pattern.php)
 
 ### Git Workflow
-Initialize: 	`git init`
-Add: 		`git add .`
-Remote add:	`git remote add origin git@github.com:user/repository.git`
-Status: 	`git status`
-Commit: 	`git commit -am "Message"
-Push: 		`git push origin master`
-Tag:		`git tag -a tagname -m "Message"
-Clone: 		`git clone git@gihub.com:user/repository.git`
-Pull: 		`git pull origin master`
+`git init` (Git initialisieren)
+
+`git add .` (ganzes Verzeichnis adden)
+
+`git remote add origin git@github.com:user/repository.git` (Git remote adden)
+
+`git status` (Status abfragen)
+
+`git commit -am "Message"` (committen und commit-Message absetzen)
+
+`git push origin master` (nach master pushen)
+
+`git tag -a tagname -m "Message"` (commit taggen)
+
+`git clone git@gihub.com:user/repository.git` (Repository clonen)
+
+`git pull origin master` (Repository pullen)
 
 ## Tag 0
 
@@ -35,11 +43,11 @@ Maven
 ```
 #### Aufgabenstellung:
 ```
-Was sind Design Pattern?
-Wozu benötige ich Design Pattern?
-Klassifikation von Design Patterns
-Auseinandersetzung mit MVC (im Kontext der Desktopentwicklung)
-Auseinandersetzung mit Observer- und State-Pattern
+1. Was sind Design Pattern?
+2. Wozu benötige ich Design Pattern?
+3. Klassifikation von Design Patterns
+4. Auseinandersetzung mit MVC (im Kontext der Desktopentwicklung)
+5. Auseinandersetzung mit Observer- und State-Pattern
 ```
 #### Materialien:
 
@@ -47,47 +55,97 @@ Auseinandersetzung mit Observer- und State-Pattern
 - [Studienprojekt Design Pattern](https://www.philipphauer.de/study/se/design-pattern.php)
 
 #### Ergebnisse:
-```
-mit den Themen der Aufgabenstellung auseinandergesetzt
-ein Projekt "Graphic" erstellt und nach Github gepusht    
-```
+
+- mit den Themen der Aufgabenstellung auseinandergesetzt
+- ein Projekt Graphic erstellt und nach Github gepusht    
+
 ## Tag 1
 
 #### Aufgabenstellung:
-```
-Entwurf einer Klassenstruktur für primitive Grafikelemente (Punkt, Linie, Ellipse und Rechteck)
-Entsprechende Member und Zugriffsmethoden entwickeln
-Entwurf einer Klasse, die Instanzen dieser Primitiven zu einer Zeichnung zusammenfasst, inklusive Member und Methoden
-Schreiben von Tests, um sicherzustellen, dass die Methoden der entworfenen Klassen wie vorgesehen arbeiten
-```
+
+1. Entwurf einer Klassenstruktur für primitive Grafikelemente (Punkt, Linie, Ellipse und Rechteck)
+2. Entsprechende Member und Zugriffsmethoden entwickeln
+3. Entwurf einer Klasse, die Instanzen dieser Primitiven zu einer Zeichnung zusammenfasst, inklusive Member und Methoden
+4. Schreiben von Tests, um sicherzustellen, dass die Methoden der entworfenen Klassen wie vorgesehen arbeiten
+
 #### Materialien:
-```
-keine
-```
+
+- keine
+
 #### Ergebnisse:
-```
-Klassen (Vector, Line, Oval, Rectangular, Drawing) in IntelliJ angelegt
-Interface Primitive angelegt)
-Vector: zwei Membervariablen (int x, int y) angelegt
-Line: zwei Membervariablen (Vector start, Vector end) angelegt
-Oval: drei Membervariablen angelegt (Vector center, int height, int width)
-Rectangle: drei Membervariablen (Vector start, int height, int width) angelegt
-Interface Primitive angelegt
-Klassen mittels 'implemente Primitive' erweitert
-Drawing: ArrayList 'primitives' erstellt, sechs Methoden (add(Primitive primitive), getSize(), remove(Primitive primitive), remove(int index), getPrimitive(int index), undo() erstellt
-mittels Alt+Einf Konstruktor, Getter und Setter erstellt
-Interface (Primitive) angelegt
-```
+
+- Klassen im Projekt angelegt
+  - `public class Vector{}`
+  - `public class Line{}`
+  - `public class Oval{}`
+  - `public class Rectangular{}`
+  - `public class Drawing{}`
+  
+- Vector: zwei Membervariablen angelegt
+  - `private int x`
+  - `private int y`
+  
+- Line: zwei Membervariablen angelegt
+  - `private Vector start`
+  - `private Vector end`
+  
+- Oval: drei Membervariablen angelegt
+  - `private Vector center`
+  - `private int height`
+  - `private int width`
+  
+- Rectangle: drei Membervariablen angelegt
+  - `private Vector start`
+  - `private int height`
+  - `private int width`
+
+- mittels `Alt+Einf` Konstruktoren, Getter und Setter in den Klassen erstellt
+  - am Beispiel Vector.java:
+    - Leeren Konstructor: `public Vector() {}`
+    - Konstruktor: `public Vector( int x , int y ) { setX(x) ; setY(y) ; }`
+    - Getter für x: `public int getX() { return x ; }`
+    - Setter für x: `public void setX(int x) { this.x = x ; }`
+    - Setter und Getter für y
+    
+- Interface aegelegt
+  - `public interface Primitive{}`
+  
+- Primitive an alle fünf Klassen vererben
+  - am Beispiel Vector.java: 
+    - `public class Vector implements Primitive{}`
+  
+- Drawing: ArrayList 'primitives' und sechs Methoden erstellt
+  - `List<Primitive> primitives = new ArrayList();`
+  - `add(Primitive primitive)`
+  - `getSize()`
+  - `remove(Primitive primitive)`
+  - `remove(int index)`
+  - `getPrimitive(int index)`
+  - `undo()`
+
+- Tests für die jeweiligen Klassen mittel `Strg+Shift+T` erstellt
+  - am Beispiel VectorTest.java:
+    - `class VectorTest {}` 
+    - mit `void constructorTest() {}` Konstruktor testen
+    - mit `void defaultConstructorTest() {}` leeren Konstruktoren testen
+    - mit `void setterTest() {}` Setter testen
+
+- Test für Drawing-Klasse mittels `Strg+Shift+T` erstellt
+  - `void addTest() {}` - Funktioniert das Hinzufüge von Elementen ordnungsgemäß?
+  - `void testRemoveDrawing() {}` - Funktioniert das Entfernen von Elementen ordnungsgemäß?
+  - `void testGetDrawing() {}` - Funktioniert Aufruf anhand vom Index?
+  - `void testUndo() {}` - Funktioniert das Entfernen des letzten Elements?
+  
 ## Tag 2
 #### Wiederholung:
-```
-Besprechung und Diskussion der Aufgabenstellung und Ergebnisse des Vortages
-```
+
+- Besprechung und Diskussion der Aufgabenstellung und Ergebnisse des Vortages
+
 #### Aufgabenstellung:
-```
-Versionsverwaltung Git verwenden, um Projekte zu klonen
-Design Pattern 'Observer Pattern' im Projekt implementieren
-```
+
+- Versionsverwaltung Git verwenden, um Projekte zu klonen
+- Design Pattern 'Observer Pattern' im Projekt implementieren
+
 #### Materialien:
 
 - [Git Anwendungshandbuch](https://git-scm.com/book/de/v2)
@@ -95,10 +153,45 @@ Design Pattern 'Observer Pattern' im Projekt implementieren
 - [Design Pattern](https://amzn.to/2LjTqGv) der Gang of four ([Deutsche Ausgabe](https://amzn.to/2XB0UqT))
 
 #### Ergebnisse:
-```
-Interfaces Observer und Observable angelegt
-Observer: eine Methode update() angelegt
-Observable: drei Methoden (addObserver(Observer observer), removeObserver(Observer observer), notifyObserver()) angelegt
-...
-```
 
+- Interfaces GraphicObserver und GraphicObservable angelegt
+  - `public interface GraphicObserver{}`
+  - `public interface GraphicObservable{}`
+  
+- Drawing: ArrayList und drei @Override-Methoden angelegt:
+  - `List<GraphicObserver> graphicObservers = new ArrayList();`
+  - `public void addObserver(GraphicObserver graphicObserver) { observers.add(graphicObserver); }`
+  - `public void removeObserver(GraphicObserver graphicObserver) { observers.remove(graphicObserver); }`
+  - `public void notifyObserver() { for (int i = 0 ; i < observers.size(); i++) { observers.get(i).update(); } }`
+  
+- GraphicObserver: update()-Methode aufrufen
+  - `void update()`
+  
+- GraphicObservable: drei Methoden aufrufen
+  - `addObserver(GraphicObserver graphicObserver)`
+  - `removeObserver(GraphicObserver graphicObserver)`
+  - `notifyObserver()`
+
+- Test angelegt
+  - `void testObservable() {}` - Funktioniert update() in GraphicObservable ordnungsgemäß?
+
+## Tag 3
+#### Wiederholung:
+
+- Besprechung und Diskussion der Aufgabenstellung und Ergebnisse des Vortages 
+
+#### Aufgabenstellung:
+
+- Namensgebungen überdenken
+- Tests überarbeiten
+
+#### Materialien
+
+- [Studienprojekt Design Pattern](https://www.philipphauer.de/study/se/design-pattern.php)
+
+#### Ergebnisse
+
+- testObservable erweitert: Werden add und remove korrekt gezählt und an Observer übermittelt? 
+- alle Tests sind grün
+- Namensgebung überarbeitet (englische Variablen-, Methoden- und Klassennamen)
+- diese README.md zur Dokumentation angelegt

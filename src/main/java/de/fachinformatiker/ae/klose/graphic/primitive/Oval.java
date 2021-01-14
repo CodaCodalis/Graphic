@@ -1,7 +1,5 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
-import de.fachinformatiker.ae.klose.graphic.Primitive;
-
 public class Oval implements Primitive {
 
   private Vector center;
