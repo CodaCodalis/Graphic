@@ -16,18 +16,20 @@ Dokumentation
 ## Tag 0
 
 Wiederholung:
+'''
 	Klassen, Vererbung, Konstruktoren, Member, Getter/Setter, Membermethoden
 	Collection, List, Map
 	JUnit
 	Maven
-
+'''
 Aufgabenstellung:
+'''
 	Was sind Design Pattern?
 	Wozu benötige ich Design Pattern?
 	Klassifikation von Design Patterns
 	Auseinandersetzung mit MVC (im Kontext der Desktopentwicklung)
 	Auseinandersetzung mit Observer- und State-Pattern
-
+'''
 Materialien:
 
 - [Design Pattern (GoF](https://de.wikipedia.org/wiki/Entwurfsmuster_(Buch))
