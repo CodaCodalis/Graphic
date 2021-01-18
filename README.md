@@ -204,11 +204,17 @@ Maven
 #### Aufgabenstellung:
 
 - Entwurf einer Menüführung für das Projekt Graphic
+- Implementierung der Menüfühung
 
 #### Materialien
 
-- ...
+- [State Pattern](https://www.philipphauer.de/study/se/design-pattern/state.php)
 
 #### Ergebnisse
 
+- Entwurf für die Menüführung
+
 ![Menüführung](images/menue.png "Menüführung")
+
+- Klassen Menu, MainMenu und DrawableMenu angelegt
+- Interface MenuState angelegt
