@@ -195,3 +195,20 @@ Maven
 - alle Tests sind grün
 - Namensgebung überarbeitet (englische Variablen-, Methoden- und Klassennamen)
 - diese README.md zur Dokumentation angelegt
+
+## Tag 4
+####  Wiederholung
+
+- Besprechung und Diskussion der Ergebnisse der Vorwoche
+
+#### Aufgabenstellung:
+
+- Entwurf einer Menüführung für das Projekt Graphic
+
+#### Materialien
+
+- ...
+
+#### Ergebnisse
+
+![Menüführung](images/menue.png "Menüführung")
