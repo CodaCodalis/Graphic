@@ -101,7 +101,7 @@ Maven
 
 - mittels `Alt+Einf` Konstruktoren, Getter und Setter in den Klassen erstellt
   - am Beispiel Vector.java:
-    - Leeren Konstructor: `public Vector() {}`
+    - Leeren Konstruktor: `public Vector() {}`
     - Konstruktor: `public Vector( int x , int y ) { setX(x) ; setY(y) ; }`
     - Getter für x: `public int getX() { return x ; }`
     - Setter für x: `public void setX(int x) { this.x = x ; }`
