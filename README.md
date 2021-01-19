@@ -218,3 +218,30 @@ Maven
 
 - Interface MenuState angelegt
 - Klassen Menu, MainMenu und DrawableMenu angelegt
+
+## Tag 5
+
+####  Wiederholung
+
+- Besprechung und Diskussion der Ergebnisse der Vorwoche
+
+#### Aufgabenstellung:
+
+- Entwurf eines Menüsystems mithilfe von UML
+- Implementierung des Menüs anhand des UML-Diagramms
+- Funktionalität der Menüpunkte herstellen
+- Überschreibung der toString-Methode der Primitive
+
+#### Materialien
+
+- keine
+
+#### Ergebnisse
+
+- mithilfe eines UML-Diagramms ein Menüsystem entworfen
+
+![Menüsystem](images/uml_menue.png "Menüsystem")
+
+- Implementierung des Menüs
+- Funktionalität der Menüpunkte hergestellt
+- Überschreibung der toString-Methode der Primitive
