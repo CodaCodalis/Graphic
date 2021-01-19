@@ -231,10 +231,11 @@ Maven
 - Implementierung des Menüs anhand des UML-Diagramms
 - Funktionalität der Menüpunkte herstellen
 - Überschreibung der toString-Methode der Primitive
+- in Java-Insel lesen: Kapitel 17.1, 17.2, 17.4.4, 17.4.5 und **17.10**
 
 #### Materialien
 
-- keine
+- [Java-Insel Kapitel 17](http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_17_010.htm)
 
 #### Ergebnisse
 
@@ -245,3 +246,4 @@ Maven
 - Implementierung des Menüs
 - Funktionalität der Menüpunkte hergestellt
 - Überschreibung der toString-Methode der Primitive
+- in Java-Insel gelesen
