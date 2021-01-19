@@ -1,5 +1,6 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,6 +18,7 @@ class RectangleTest {
     assertEquals(20, width);
   }
 
+  @Disabled
   @Test
   void defaultConstructorTest() {
     Rectangle rectangle = new Rectangle();

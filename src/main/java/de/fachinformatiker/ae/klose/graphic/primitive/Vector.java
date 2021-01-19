@@ -29,4 +29,9 @@ public class Vector implements Primitive {
   public void setY(int y) {
     this.y = y;
   }
+
+  @Override
+  public String toString() {
+    return "Vector (x, y): " + "(" + x + ", " + y + ")";
+  }
 }

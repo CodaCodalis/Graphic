@@ -21,11 +21,15 @@ public class DrawableMenu implements MenuState{
     while (!exit) {
       String input = scanner.nextLine();
       switch (input) {
-        case "1":
+        case "1": state = new AddMenu();
+                  exit = true;
           break;
-        case "2":
+        case "2": state = new RemoveMenu();
+                  exit = true;
           break;
         case "3": showDrawing(drawing);
+                  state = new DrawableMenu();
+                  exit = true;
           break;
         case "x": exit = true;
                   state = new MainMenu();

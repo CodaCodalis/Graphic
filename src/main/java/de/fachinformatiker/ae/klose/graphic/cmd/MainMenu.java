@@ -8,7 +8,9 @@ public class MainMenu implements MenuState{
   @Override
   public void showMenu() {
     System.out.println("(1) neue Zeichnung");
-    System.out.println("(2) Zeichnung laden");
+    System.out.println("(2) Zeichnungen anzeigen");
+    System.out.println("(3) Zeichnung laden");
+    System.out.println("(4) Zeichnung löschen");
     System.out.println("(x) Programm beenden");
   }
 
@@ -24,6 +26,12 @@ public class MainMenu implements MenuState{
                   exit = true;
           break;
         case "2":
+          break;
+        case "3": state = new LoadDrawingMenu();
+                  exit = true;
+          break;
+        case "4": state = new RemoveDrawingMenu();
+                  exit = true;
           break;
         case "x": exit = true;
                   state = null;

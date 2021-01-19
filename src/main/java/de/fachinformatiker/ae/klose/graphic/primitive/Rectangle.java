@@ -7,9 +7,9 @@ public class Rectangle implements Primitive {
   int width;
 
   public Rectangle(){
-    this.start = new Vector(40,30);
-    this.height = 20;
-    this.width = 10;
+    //this.start = new Vector(40,30);
+    //this.height = 20;
+    //this.width = 10;
   }
 
   public Rectangle(Vector mitte, int height, int width) {
@@ -40,5 +40,10 @@ public class Rectangle implements Primitive {
 
   public void setWidth(int width) {
     this.width = width;
+  }
+
+  @Override
+  public String toString() {
+    return "Rechteck (Startpunkt, Höhe, Breite): " + start + ", " + height + ", " + width;
   }
 }

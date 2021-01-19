@@ -216,5 +216,5 @@ Maven
 
 ![Menüführung](images/menue.png "Menüführung")
 
-- Klassen Menu, MainMenu und DrawableMenu angelegt
 - Interface MenuState angelegt
+- Klassen Menu, MainMenu und DrawableMenu angelegt

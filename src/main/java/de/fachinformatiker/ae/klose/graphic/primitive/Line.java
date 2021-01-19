@@ -1,13 +1,13 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
-public class Line {
+public class Line implements Primitive {
 
   private Vector start;
   private Vector end;
 
   public Line() {
-    this.start = new Vector(0, 0);
-    this.end = new Vector(10, 10);
+    //this.start = new Vector(0, 0);
+    //this.end = new Vector(10, 10);
   }
 
   public Line(Vector start, Vector end) {
@@ -31,4 +31,10 @@ public class Line {
   public void setEnd(Vector end) {
     this.end = end;
   }
+
+  @Override
+  public String toString() {
+    return "Linie (Startpunkt, Endpunkt): " + start + ", " + end;
+  }
+
 }

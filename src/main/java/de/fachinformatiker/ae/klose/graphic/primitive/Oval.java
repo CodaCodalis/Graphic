@@ -7,9 +7,9 @@ public class Oval implements Primitive {
   private int width;
 
   public Oval(){
-    this.center = new Vector(40,30);
-    this.height = 20;
-    this.width = 10;
+    //this.center = new Vector(40,30);
+    //this.height = 20;
+    //this.width = 10;
   }
 
   public Oval(Vector center, int height, int width) {
@@ -40,5 +40,10 @@ public class Oval implements Primitive {
 
   public void setWidth(int width) {
     this.width = width;
+  }
+
+  @Override
+  public String toString() {
+    return "Oval (Mittelpunkt, Höhe, Breite): " + center + ", " + height + ", " + width;
   }
 }

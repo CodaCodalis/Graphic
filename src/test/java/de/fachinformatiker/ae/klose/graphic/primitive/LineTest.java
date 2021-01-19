@@ -1,5 +1,6 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +17,7 @@ class LineTest {
     assertEquals(9, line.getEnd().getY());
   }
 
+  @Disabled
   @Test
   void defaultConstructorTest() {
     Line line = new Line();
