@@ -1,6 +1,8 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
-public class Rectangle implements Primitive {
+import java.io.Serializable;
+
+public class Rectangle implements Primitive, Serializable {
 
   Vector start;
   int height;

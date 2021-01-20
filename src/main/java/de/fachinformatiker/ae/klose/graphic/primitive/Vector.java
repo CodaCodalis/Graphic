@@ -1,6 +1,8 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
-public class Vector implements Primitive {
+import java.io.Serializable;
+
+public class Vector implements Primitive, Serializable {
 
   private int x;
   private int y;

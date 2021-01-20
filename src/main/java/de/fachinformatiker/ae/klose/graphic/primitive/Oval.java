@@ -1,6 +1,8 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
-public class Oval implements Primitive {
+import java.io.Serializable;
+
+public class Oval implements Primitive, Serializable {
 
   private Vector center;
   private int height;

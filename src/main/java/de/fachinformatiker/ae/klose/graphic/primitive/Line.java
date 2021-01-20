@@ -1,6 +1,8 @@
 package de.fachinformatiker.ae.klose.graphic.primitive;
 
-public class Line implements Primitive {
+import java.io.Serializable;
+
+public class Line implements Primitive, Serializable {
 
   private Vector start;
   private Vector end;

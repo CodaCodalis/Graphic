@@ -246,4 +246,21 @@ Maven
 - Implementierung des Menüs
 - Funktionalität der Menüpunkte hergestellt
 - Überschreibung der toString-Methode der Primitive
-- in Java-Insel gelesen
+- in Java-Insel Kapitel 17.1, 17.2, 17.4.4 und 17.4.5 gelesen
+
+## Tag 6
+
+#### Aufgabenstellung
+
+- in Java-Insel lesen: Kapitel 17.10
+- Beispiele zum Abspeichern und Laden anschauen
+
+#### Materialien
+
+- [Java-Insel Kapitel 17](http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_17_010.htm)
+
+#### Ergebnisse
+
+- in Java-Insel Kapitel 17.10 gelesen
+- einige Beispiele ausprobiert: FileOutputStream und FileInputStream
+- Save- und Load-Funktion im Projekt implementiert
