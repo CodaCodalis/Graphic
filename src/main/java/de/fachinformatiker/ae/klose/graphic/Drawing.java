@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Drawing implements Primitive, GraphicObservable, Serializable {
+  private static final long serialVersionUID = 2405994656081526552L;
   List<Primitive> primitives = new ArrayList();
-  List<GraphicObserver> graphicObservers = new ArrayList();
+  transient List<GraphicObserver> graphicObservers = new ArrayList();
 
   public void add(Primitive primitive) {
     this.primitives.add(primitive);

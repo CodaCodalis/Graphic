@@ -1,22 +1,23 @@
 package de.fachinformatiker.ae.klose.graphic.cmd;
 
-import de.fachinformatiker.ae.klose.graphic.Drawing;
 import de.fachinformatiker.ae.klose.graphic.primitive.*;
-
 import java.util.Scanner;
 
 public class AddMenu implements MenuState {
   @Override
   public void showMenu() {
+    System.out.println();
+    System.out.println(">>>Hinzufügenmenü");
     System.out.println("(1) Punkt");
     System.out.println("(2) Linie");
     System.out.println("(3) Ellipse");
     System.out.println("(4) Rechteck");
     System.out.println("(x) zurück");
+    System.out.print("Eingabe: ");
   }
 
   @Override
-  public MenuState processMenu(Drawing drawing) {
+  public MenuState processMenu(MenuOperation menuOperation) {
     MenuState state = null;
     Scanner scanner = new Scanner(System.in);
     boolean exit = false;
@@ -25,25 +26,25 @@ public class AddMenu implements MenuState {
       switch (input) {
         case "1": Vector vector = new Vector();
                   addVector(vector);
-                  drawing.add(vector);
+                  menuOperation.getDrawing().add(vector);
                   state = new AddMenu();
                   exit = true;
           break;
         case "2": Line line = new Line();
                   addLine(line);
-                  drawing.add(line);
+                  menuOperation.getDrawing().add(line);
                   state = new AddMenu();
                   exit = true;
           break;
         case "3": Oval oval = new Oval();
                   addOval(oval);
-                  drawing.add(oval);
+                  menuOperation.getDrawing().add(oval);
                   state = new AddMenu();
                   exit = true;
           break;
         case "4": Rectangle rectangle = new Rectangle();
                   addRectangle(rectangle);
-                  drawing.add(rectangle);
+                  menuOperation.getDrawing().add(rectangle);
                   state = new AddMenu();
                   exit = true;
           break;

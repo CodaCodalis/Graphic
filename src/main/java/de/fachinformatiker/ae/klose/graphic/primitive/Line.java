@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Line implements Primitive, Serializable {
 
+  private static final long serialVersionUID = 3683352401409689640L;
   private Vector start;
   private Vector end;
 

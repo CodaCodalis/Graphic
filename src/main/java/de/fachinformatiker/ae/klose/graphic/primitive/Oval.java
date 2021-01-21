@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Oval implements Primitive, Serializable {
 
+  private static final long serialVersionUID = -3762012035304759136L;
   private Vector center;
   private int height;
   private int width;
