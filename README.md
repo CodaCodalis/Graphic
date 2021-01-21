@@ -263,4 +263,22 @@ Maven
 
 - in Java-Insel Kapitel 17.10 gelesen
 - einige Beispiele ausprobiert: FileOutputStream und FileInputStream
-- Save- und Load-Funktion im Projekt implementiert
+- Load-Funktion im Projekt implementiert
+
+## Tag 7
+
+#### Aufgabenstellung
+
+- in Java-Insel lesen
+- Save-Funktion im Projekt implementieren
+
+#### Materialien
+
+- [Java-Insel Kapitel 17](http://openbook.rheinwerk-verlag.de/javainsel9/javainsel_17_010.htm)
+
+#### Ergebnisse
+
+- Interface MenuOperation angelegt
+- Save-Funktion im Projekt implementiert
+- Remove-Funktion nach Index implementiert
+- in Java-Insel zu OOP gelesen
