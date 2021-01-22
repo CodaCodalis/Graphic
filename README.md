@@ -223,7 +223,7 @@ Maven
 
 ####  Wiederholung
 
-- Besprechung und Diskussion der Ergebnisse der Vorwoche
+- Besprechung und Diskussion der Ergebnisse des Vortages
 
 #### Aufgabenstellung:
 
@@ -263,7 +263,7 @@ Maven
 
 - in Java-Insel Kapitel 17.10 gelesen
 - einige Beispiele ausprobiert: FileOutputStream und FileInputStream
-- Load-Funktion im Projekt implementiert
+- Save-Funktion im Projekt implementiert
 
 ## Tag 7
 
@@ -279,6 +279,6 @@ Maven
 #### Ergebnisse
 
 - Interface MenuOperation angelegt
-- Save-Funktion im Projekt implementiert
+- Load-Funktion im Projekt implementiert
 - Remove-Funktion nach Index implementiert
 - in Java-Insel zu OOP gelesen
