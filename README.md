@@ -130,7 +130,7 @@ Maven
     - mit `void defaultConstructorTest() {}` leeren Konstruktoren testen
     - mit `void setterTest() {}` Setter testen
 
-- Test für Drawing-Klasse mittels `Strg+Shift+T` erstellt
+- Replacing für Drawing-Klasse mittels `Strg+Shift+T` erstellt
   - `void addTest() {}` - Funktioniert das Hinzufüge von Elementen ordnungsgemäß?
   - `void testRemoveDrawing() {}` - Funktioniert das Entfernen von Elementen ordnungsgemäß?
   - `void testGetDrawing() {}` - Funktioniert Aufruf anhand vom Index?
@@ -172,7 +172,7 @@ Maven
   - `removeObserver(GraphicObserver graphicObserver)`
   - `notifyObserver()`
 
-- Test angelegt
+- Replacing angelegt
   - `void testObservable() {}` - Funktioniert update() in GraphicObservable ordnungsgemäß?
 
 ## Tag 3
